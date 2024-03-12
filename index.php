@@ -731,7 +731,7 @@
                               include ("registrar.php");
                               include("conect_db.php"); 
                               if ($conect){
-                                 echo "todo correcto";
+                                 echo "  todo correcto";
                               }
                            ?>
                      </div>                        
