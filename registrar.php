@@ -10,7 +10,7 @@ if (isset($_POST['register'])){
             $Email = $_POST['Email'];
             $Phone= $_POST['Phone'];
             $Messenge= $_POST['Messenge'];
-            $consulta = "INSERT INTO llamadas(nombre , correo , telefono , mensaje) VALUES ('$Name','$Email','$Phone','$Messenge')";
+            $consulta = "INSERT INTO `llamadas`(`nombre`, `correo`, `telefono`, `mensaje`) VALUES ('$Name','$Email','$Phone','$Messenge')";
             $resultado = mysqli_query($conect,$consulta);
             if ($resultado){
                 ?>
