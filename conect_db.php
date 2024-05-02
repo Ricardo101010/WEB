@@ -1,6 +1,6 @@
 <?php
-$servername 'localhost';
-$database 'id21747836_llamadas';
+$servername = 'localhost';
+$database = 'id21747836_llamadas';
 $username = 'id21747836_admin';
 $password = 'Ri16846677*';
 
