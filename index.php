@@ -727,12 +727,19 @@
                      </div>
                      <div class="col-md-12">
                         <button class="send_btn" name="register">Enviar</button>
-                           <?php
-                              include ("registrar.php");
-                              include("conect_db.php"); 
-                              if ($conect){
-                                 echo "  todo correcto";
-                              }
+                           <<?php
+                           $servername = "localhost";
+                           $database = "id21747836_llamadas";
+                           $username = "id21747836_admin";
+                           $password = "Ri16846677*";
+                           // Create connection
+                           $conn = mysqli_connect($servername, $username, $password, $database);
+                           // Check connection
+                           if (!$conn) {
+                              die("Connection failed: " . mysqli_connect_error());
+                           }
+                           echo "Connected successfully";
+                           mysqli_close($conn);
                            ?>
                      </div>                        
                </form>                  
