@@ -711,7 +711,7 @@
          </div>
          <div class="row">
             <div class="col-md-8 offset-md-2">
-               <form id="post_form" class="contact_form" method="post">
+               <form id="formulario" class="contact_form" method="post" action="registrar.php">
                   <div class="row">
                      <div class="col-md-12 ">
                         <input class="contact_control" placeholder=" Name" type="type" name="Name">
@@ -726,23 +726,23 @@
                         <textarea class="textarea" placeholder="Message" type="type" Message="Name" name="Message" >Message </textarea>
                      </div>
                      <div class="col-md-12">
-                        <button class="send_btn" name="register">Enviar</button>
-                           <<?php
-                           $servername = "localhost";
-                           $database = "id21747836_llamadas";
-                           $username = "id21747836_admin";
-                           $password = "Ri16846677*";
-                           // Create connection
-                           $conn = mysqli_connect($servername, $username, $password, $database);
-                           // Check connection
-                           if (!$conn) {
-                              die("Connection failed: " . mysqli_connect_error());
-                           }
-                           echo "Connected successfully";
-                           mysqli_close($conn);
-                           ?>
+                        <button class="send_btn" type="submit" onClick = "fun()" name="register">Enviar</button>
+                        <?php
+                            //include ("registrar.php");
+                              //if ($conn){
+                                 //echo "todo correcto";
+                              //}
+                        ?>
                      </div>                        
-               </form>                  
+               </form>
+               <script>
+                  document.addEventListener('DOMContentLoaded', function(){
+                    let formulario = document.getElementById('formulario');
+                    formulario.addEventListener('submit', function() {
+                      formulario.reset();
+                    });
+                  });
+                </script>                  
             </div>
          </div>
       </div>
